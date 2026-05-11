@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANATOP™ | Relief for Chronic Anal Fissures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oxanium:wght@700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-oxanium {
+            font-family: 'Oxanium', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), 
+                        url('36.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .icon-box {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-width: 1px;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 50px -15px rgba(249, 115, 22, 0.15);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        /* 3D Icon Animation */
+        .icon-container {
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .icon-box:hover .icon-container {
+            transform: rotateY(360deg);
+            background-color: #f97316;
+        }
+
+        .icon-box:hover .icon-container i {
+            color: white;
+        }
+
+        /* Smooth Floating Animation for Product */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        sup {
+            font-size: 0.35em;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f97316;
+        }
+
+        /* Decorative Blurs */
+        .blur-blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(249, 115, 22, 0.1);
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* Triangle Bullet for About Us */
+        .triangle-bullet {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #f97316;
+            display: inline-block;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 hero-gradient text-white overflow-hidden">
+        
+        <!-- Top Left Logo — increased 50%: h-12 md:h-16 → h-18 md:h-24 -->
+        <div class="absolute top-8 left-8" data-aos="fade-right">
+            <img src="SLAFINALlogo2025V1.png" alt="SLA Pharma Logo" class="h-18 md:h-24 w-auto" style="height:4.5rem;">
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-6xl md:text-9xl font-bold mb-4 font-oxanium tracking-tight drop-shadow-2xl">ANATOP<sup>TM</sup></h1>
+            </div>
+            <p class="text-xl md:text-3xl font-light mb-8 text-white tracking-wide" data-aos="fade-up" data-aos-delay="200">
+                Relief for Chronic Anal Fissures
+            </p>
+            <div class="w-32 h-1 bg-orange-500 mx-auto mb-10 rounded-full" data-aos="stretch-x" data-aos-delay="400"></div>
+            <p class="text-lg md:text-xl text-white max-w-2xl mx-auto leading-relaxed drop-shadow-md" data-aos="fade-up" data-aos-delay="600">
+                REGULATOR APPROVED PROVEN SOLUTION COMBINING VALIDATED RESEARCH AND CLINICAL EXCELLENCE.
+            </p>
+            
+            <div class="mt-12" data-aos="fade-up" data-aos-delay="800">
+                <a href="#about" class="bg-orange-600 hover:bg-orange-500 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-orange-500/40 inline-block">
+                    Explore Our Innovation
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-80">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="relative py-24 px-4 bg-white overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-8">About <span class="text-orange-500">SLA Pharma</span></h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        We are a dedicated pharmaceutical research and development company focused on transforming gastroenterological care through innovation and patient-centric solutions.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <span class="triangle-bullet flex-shrink-0"></span>
+                            <div>
+                                <h4 class="font-bold text-lg">Privately Owned</h4>
+                                <p class="text-slate-500">Decades of experience in Gastro R&D and Commercialisation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="triangle-bullet flex-shrink-0"></span>
+                            <div>
+                                <h4 class="font-bold text-lg">Full Lifecycle R&D</h4>
+                                <p class="text-slate-500">Experienced in conception to commercialisation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="triangle-bullet flex-shrink-0"></span>
+                            <div>
+                                <h4 class="font-bold text-lg">Global Reach</h4>
+                                <p class="text-slate-500">Worldwide network of leading Key Opinion Leaders.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <span class="triangle-bullet flex-shrink-0"></span>
+                            <div>
+                                <h4 class="font-bold text-lg">Affordable Medication</h4>
+                                <p class="text-slate-500">Driven to maximise patient access and compliance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <img src="36.png" alt="SLA Pharma Lifestyle" class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-orange-500 text-white p-8 rounded-2xl shadow-xl hidden lg:block">
+                        <p class="text-2xl font-bold">Innovation</p>
+                        <p class="text-sm opacity-80 text-nowrap">Driven by Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose ANATOP™ Section -->
+    <section id="explore" class="relative py-24 px-4 bg-slate-50 overflow-hidden">
+        <div class="blur-blob top-0 left-0"></div>
+        <div class="blur-blob bottom-0 right-0"></div>
+
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Choose <span class="text-orange-500 font-oxanium">ANATOP<sup>TM</sup></span>?</h2>
+                <div class="w-20 h-1 bg-orange-200 mx-auto mb-6"></div>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto">A clinically proven treatment for chronic anal fissures, setting new standards in gastroenterological care.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 icon-box group" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-8 icon-container">
+                        <i class="fas fa-shield-alt text-orange-600 text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Clinical Efficacy & Safety</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Rigorously tested and clinically proven to deliver effective relief with an outstanding safety profile.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 icon-box group" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-8 icon-container">
+                        <i class="fas fa-heart text-orange-600 text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Patient Comfort & Relief</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Designed with patient well-being at the forefront, providing gentle yet powerful symptom relief.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 icon-box group" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-8 icon-container">
+                        <i class="fas fa-stethoscope text-orange-600 text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Medical Backing</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Trusted by healthcare professionals and backed by comprehensive clinical research.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 icon-box group" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-8 icon-container">
+                        <i class="fas fa-users text-orange-600 text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Accessibility & Care</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Making advanced medical treatment accessible to those who need it most, with ongoing support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="py-24 px-4 bg-white relative overflow-visible">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+            <!-- Image Side -->
+            <div class="w-full lg:w-3/5" data-aos="fade-right">
+                <div class="relative group">
+                    <div class="absolute -inset-10 bg-orange-500/10 rounded-[4rem] blur-3xl group-hover:bg-orange-500/20 transition-all"></div>
+                    
+                    <div class="relative rounded-[3rem] bg-white p-2 md:p-6 flex items-center justify-center shadow-2xl overflow-visible min-h-[450px] border border-slate-100">
+                        <img src="ANATOPProductMockup.png" 
+                             alt="ANATOP™ Mock-up" 
+                             class="w-full h-auto max-w-[650px] object-contain float-animation drop-shadow-[0_35px_60px_rgba(0,0,0,0.18)] relative z-10 scale-110">
+                        
+                        <div class="absolute top-10 right-4 bg-orange-600 text-white px-6 py-3 rounded-full text-xs font-bold shadow-2xl animate-pulse z-20 border border-white/20 uppercase tracking-widest">
+                            Proven Formula
+                        </div>
+
+                        <div class="absolute -bottom-8 -left-2 md:-left-12 bg-white/95 backdrop-blur-md p-6 rounded-2xl flex items-center space-x-5 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 z-20" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center text-white shadow-lg shadow-green-500/30">
+                                <i class="fas fa-check text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest font-black text-slate-400 mb-1">Clinical Trials</p>
+                                <p class="text-lg font-bold text-slate-800">100% Completed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="w-full lg:w-2/5" data-aos="fade-left">
+                <div class="inline-flex items-center space-x-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-xs font-bold mb-8 uppercase tracking-widest">
+                    <i class="fas fa-rocket animate-bounce"></i>
+                    <span>Market Launch 2026</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">A New Era in <span class="text-orange-500">Fissure Treatment</span></h2>
+                <p class="text-slate-600 text-lg mb-10 leading-relaxed italic border-l-4 border-orange-500 pl-6">
+                    <span class="font-oxanium text-slate-800 not-italic uppercase tracking-tight">ANATOP<sup>TM</sup></span> represents years of dedicated research and development.
+                </p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-5 group">
+                        <div class="mt-1 w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 transition-all shadow-sm">
+                            <i class="fas fa-check text-green-600 text-sm group-hover:text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-slate-800">Clinical Research Excellence</h4>
+                            <p class="text-slate-500 leading-relaxed">Gold-standard trials demonstrating superior safety.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-5 group">
+                        <div class="mt-1 w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 transition-all shadow-sm">
+                            <i class="fas fa-check text-green-600 text-sm group-hover:text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-slate-800">Regulatory Compliance</h4>
+                            <p class="text-slate-500 leading-relaxed">Full EU approved product dossier.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduling Section -->
+    <section class="py-24 px-4 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8" data-aos="fade-down">Explore Licensing Opportunities</h2>
+            <p class="text-slate-400 mb-12 text-xl leading-relaxed max-w-2xl mx-auto" data-aos="fade-up">
+                Interested in bringing <span class="font-oxanium text-white uppercase tracking-tighter">ANATOP<sup>TM</sup></span> to your territory?
+            </p>
+            <div data-aos="zoom-in">
+                <a href="https://outlook.office.com/book/AnatopInLicencingExploratoryCall@slapharma.com/?ismsaljsauthenabled" target="_blank" class="group relative inline-flex items-center space-x-4 bg-white text-slate-900 hover:bg-orange-600 hover:text-white font-bold py-6 px-14 rounded-xl transition-all text-xl shadow-2xl">
+                    <i class="far fa-calendar-alt text-orange-600 group-hover:text-white transition-colors"></i>
+                    <span>Schedule an Introductory Call</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 px-4 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
+                <div class="col-span-1">
+                    <div class="mb-8">
+                        <!-- Footer logo increased 50%: h-10 → h-16 -->
+                        <img src="SLAFINALlogo2025V1.png" alt="SLA Pharma Logo" class="h-16 w-auto opacity-90">
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Advanced pharmaceutical solutions for gastroenterology. SLA Pharma combine clinical excellence with a focus on patient care.
+                    </p>
+                </div>
+                <div>
+                    <!-- Quick Links — updated per brief -->
+                    <h5 class="text-white font-bold mb-8 uppercase tracking-widest text-xs">Quick Links</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <a href="https://www.slapharma.com" target="_blank" class="hover:text-orange-500 transition-colors">About SLA Pharma</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="hover:text-orange-500 transition-colors">About Anatop</a>
+                        </li>
+                        <li>
+                            <a href="https://outlook.office.com/book/AnatopInLicencingExploratoryCall@slapharma.com/?ismsaljsauthenabled" target="_blank" class="hover:text-orange-500 transition-colors">Schedule Call</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-8 uppercase tracking-widest text-xs">Legal</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-8 uppercase tracking-widest text-xs">Contact</h5>
+                    <ul class="space-y-5 text-sm">
+                        <li class="flex items-center space-x-4"><i class="fas fa-envelope text-orange-500"></i><span>info@slapharma.com</span></li>
+                        <li class="flex items-center space-x-4"><i class="fas fa-globe text-orange-500"></i><span>www.slapharma.com</span></li>
+                        <li class="flex items-center space-x-4"><i class="fas fa-phone text-orange-500"></i><span>+44 1923 681001</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-900 text-center">
+                <p class="text-[10px] mb-8 leading-relaxed max-w-4xl mx-auto italic opacity-60">
+                    <span class="text-orange-500 font-bold not-italic uppercase">Medical Disclaimer:</span> <span class="font-oxanium uppercase">ANATOP<sup>TM</sup></span> is a prescription medical product currently under development. Product availability is subject to local regulatory approval.
+                </p>
+                <p class="text-xs tracking-widest font-light">
+                    &copy; 2026 SLA PHARMA. ALL RIGHTS RESERVED. <span class="font-oxanium ml-2 text-white uppercase">ANATOP<sup>TM</sup></span> IS A REGISTERED TRADEMARK.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ 
+            duration: 1000, 
+            once: true, 
+            offset: 150,
+            easing: 'ease-out-back'
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
